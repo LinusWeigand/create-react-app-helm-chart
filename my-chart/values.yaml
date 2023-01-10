@@ -1,0 +1,15 @@
+name: create-react-app
+image:
+  repository: linuscontainerregistry2.azurecr.io/create-react-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 3
+
+service:
+  type: ClusterIP
+  port: 3000
+  name: create-react-app-service
+
+ingress:
+  enabled: true
